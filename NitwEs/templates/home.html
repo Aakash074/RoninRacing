@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ronin Racing- NITW ES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="{% static 'css/home_css.css' %}">
+
+  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+  <a class="navbar-brand" href="/">Ronin Racing</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/spons/">Sponsors</a>
+      </li>
+      <li class="nav-item">
+        <a href="/team/" class="nav-link">Team</a>
+      </li>
+      <li class="nav-item">
+        <a href="/quiz/exam/" class="nav-link">Quiz</a>
+      </li>
+    </ul>
+    {% if auth %}
+      <a href="/auth/logout/" class="nav-link" style="color: white;">Logout</a>
+    {% else %}
+      <a href="/auth/login/" class="nav-link" style="color: white;" >Login</a>
+      <a href="/auth/signup/" class="nav-link" style="color: white;">Sign Up</a>
+    {% endif %}
+    
+  </div>
+</div>
+</nav>
+<div class="banner">
+  <div class="banner__overlay">
+    <div class="banner__container">
+      <h1 class="banner__title">Ronin Racing</h1>
+      <p class="banner__text">NITW Electric Sports</p>
+      <h2 style="color: white;"> We the team of Ronin Gaming,  <span class="typing"></span></h2>
+      <!-- <a href="#" class="btn btn--opacity">Explore</a> -->
+    </div>
+    <img class="banner__scroll-down" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiNGRkZGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=" />
+  </div>
+</div>
+
+<!-- <div class="sect sect--type">
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-5 col-xs-8 col-sm-6 col--inbl">
+        <h1 class="sect__title">We believe in coffee that tastes incredible</h1>
+      <p class="sect__subtitle">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+      </p>
+      </div>
+    </div>
+    <div class="row row--small row--margin row--center">
+      <div class="col-md-4 col-sm-4 coffee">
+        <img src="https://image.ibb.co/bKy6Db/coffee_item_2.png" class="coffee__img">
+        <h2 class="coffee__name">Mocha latte</h2>
+        <p class="coffee__descr">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+        </p>
+      </div>
+      
+      <div class="col-md-4 col-sm-4 coffee">
+        <img src="https://image.ibb.co/nN0WeG/coffee_item_1.png" class="coffee__img">
+        <h2 class="coffee__name">Pour over</h2>
+        <p class="coffee__descr">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+        </p>
+      </div>
+      
+       <div class="col-md-4 col-sm-4 coffee">
+        <img src="https://image.ibb.co/dHQa6w/coffee_item_3.png" class="coffee__img">
+        <h2 class="coffee__name">Espresso</h2>
+        <p class="coffee__descr">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+        </p>
+      </div>  
+    </div>
+       <div class="row row--margin row--center">
+         <a href="#" class="btn">Full menu</a>
+       </div>
+  </div>
+</div> -->
+
+
+<div class="sect sect--brown sect--no-bottom transfer">
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-7 col-sm-8 col--inbl " style="margin-left: 20%;">
+        <h1 class="sect__title sect--white-text">Our Story Ronin Racing</h1>
+      <p class="sect__subtitle sect--white-text" >
+      We strongly believe in the concept of a clean and green future and would like to be a beacon of it by building an electric F1 car indigenously which could potentially compete with the best of the teams in Formula Bharat and Formula SAE(Society of Automotive Engineers) the UK chapter and be a testament of efficiency and raw ingenious engineering. Our team is of 40 unflagging and ardent students from different branches and years, who strive to make this dream come true.
+      
+      Ronin evinced being a champion by securing an All India 3rd place at the FSEV Concept Challenge - an event for Formula Bharath enthusiasts, where contests had to present their electric package design and procurement in front of the industrial experts ,conducted on July 14th. This achievement indeed proved the renowned calibre of Ronin Racings' Electric Formula One Car .
+      Ronin Racing
+      
+      </p>
+<br><br><br>
+      </div>
+      <br><hr class="my-4"><br>
+    </div>
+</div>
+  </div>
+
+
+
+  <!-- <div class="story-img"></div> -->
+<!-- <div class="half-sect">
+  <div class="half half-sect__first">
+    <div class="description">
+      <h2 class="description__title">FRESH BEANS</h2>
+      <p class="description__p">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <a href="#" class="btn">Learn more</a>
+    </div>
+
+  </div>
+    <div class="half half-sect__second">  </div>
+</div> -->
+
+
+
+<div class="sect sect--great">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-7 col-sm-offset-4 col-md-offset-6">
+        <div class="description">
+      <h2 class="description__title">About Formula Bharat</h2>
+      <p class="description__p"> Ronin Racing is India's premier Formula Student Electric team with a vision to <strong>"Revolutionize Electric Mobility in India focusing on sustainable technologies and innovations"</strong> . Formula Bharat is an F1 car design competition in which students from colleges and universities all over India compete with their very own vehicle in areas of engineering design, overall cost, marketability and dynamic performance. Formula Bharat replicates the global Formula Students hosted in around 11 countries per year.
+      
+      The main objective of this competition is to enhance the hands-on practical experience of students while applying engineering concepts taught in the classrooms. Besides this , students can hone up their management skills and build up solidarity which are essential skills required for facing the real-world. These student teams are required to build a vehicle from scratch and seek sponsorship and donations through their own means and contacts to fund their project.
+</p>
+      <a href="#" class="btn">Learn more</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 
+<div class="sect sect--best sect--center">
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-6 col-sm-7 col-xs-12">
+        <h1 class="sect__title best--bottom sect--white-text">The best coffee shop</h1>
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="https://image.ibb.co/n5gUtm/icon_1.png" class="best__img">
+            <h2 class="best__title">Best beans</h2>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="https://image.ibb.co/dwEXDm/icon_2.png" class="best__img">
+            <h2 class="best__title">Best beans</h2>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="https://image.ibb.co/j5Og66/icon_3.png" class="best__img">
+            <h2 class="best__title">Best beans</h2>
+          </div>
+        </div>
+        
+      <p class="sect__subtitle best--margin sect--white-text ">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, omnis iste natus error sit voluptatem accusantium doloremque, totam rem aperiam, voluptatem accusantium doloremque.
+      </p>
+        <a href="#" class="btn btn--top">About us</a>
+      </div>
+    </div>
+</div>
+  </div> -->
+
+
+<!-- <div class="three-img">
+  <div class="col-md-4 col-sm-4 col-xs-4 three-img__img three-img--1"></div>
+    <div class="col-md-4 col-xs-4 col-sm-4 three-img__img three-img--2"></div>
+    <div class="col-md-4 col-xs-4 col-sm-4 three-img__img three-img--3"></div>
+</div>
+ -->
+
+<div class="sect blog sect--grey">
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-5 col-sm-6 col--inbl">
+        <h1 class="sect__title">Our Team</h1>
+        <p class="sect__subtitle">
+          To acheive this great project, We need a team from different-different streams
+      </p>
+      </div>
+    </div>
+    <div class="row last-articles">
+      <div class="col-md-4 col-sm-4">
+        <div class="article-pre article-pre-1">
+             <div class="article-pre__img">
+             </div>
+          <div class="article-pre__info">
+          <h1 class="article-pre__title">
+           Electrical
+          </h1>
+          <span class="article-pre__date">power train, low voltage ,differential, acquistion</span>
+          <p class="article-pre__ex">
+          The members of Electrical Department are in charge of LV safety & harness and data acquisition & dashboard. Electronics & Integration, Battery & BMS and Electrical Power Train come under the umbrella of this department. Besides working on these key components , the department is also involved in vigorous research & development on the emerging developments in electrical racing cars.
+
+          </p>
+        </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-sm-4">
+        <div class="article-pre article-pre-2">
+             <div class="article-pre__img">
+             </div>
+          <div class="article-pre__info">
+          <h1 class="article-pre__title">
+            Mechanical
+          </h1>
+          <span class="article-pre__date">Maintaining veicle dynamics ,system dyanamics</span>
+          <p class="article-pre__ex">
+            The Mechanical Department creates and fabricates  chassis, aerodynamics and mechanical parts and develops head vehicle dynamics which includes suspension , steering and braking. This is also responsible for the mechanical power train , one of the critical parts of our Electric Car.
+          </p>
+        </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-sm-4">
+        <div class="article-pre article-pre-3">
+             <div class="article-pre__img">
+             </div>
+          <div class="article-pre__info">
+          <h1 class="article-pre__title">
+            Organizational
+          </h1>
+          <span class="article-pre__date">Marketing, Sponsorship ,web design</span>
+          <p class="article-pre__ex">
+            An intense and zestful technical team needs an indistinguishably potent organising team . The organising department manages Media & Public Relations , controls documentation and is responsible for the Team's official website (Web Development). This department brings in sponsors and works as a bridge between alumni,companies and Ronin.
+          </p>
+        </div>
+        </div>
+      </div>    
+      <br><br><br>
+                                
+    </div>
+     <div class="row row--margin row--center">
+         <a href="#" class="btn">Full Team structure</a>
+     </div>    
+ </div>
+</div>
+
+<div class="sect-t-footer"></div>
+
+<footer class="footer">
+  <div class="footer__half footer__half-1">
+    <h2 class="footer__big-title">COME ON IN!</h2>
+    <h3 class="footer__title">Weekdays</h3>
+    <p class="footer__desc">08PM - 12AM</p>
+    <h3 class="footer__title">Weekends</h3>
+    <p class="footer__desc">12PM - 02AM</p>
+    
+  </div>
+  <div class="footer__half footer__half-2">
+    <h2 class="footer__big-title">CONTACT</h2>
+    <h3 class="footer__title">Phone</h3>
+    <p class="footer__desc">+91 77 024 89394</p>
+    <h3 class="footer__title">Mail</h3>
+    <p class="footer__desc">esnitw@gmail.com</p>
+    <h3 class="footer__title">Address</h3>
+    <p class="footer__desc">Innovation Garage <br> Ground floor <br>
+      NIT Warangal, Telangana
+    </p>
+    <a href="#" class="btn">For further Queries, Contact us</a>
+  </div>
+</footer>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+
+  
+
+    <script  src="{% static 'js/home_js.js' %}"></script>
+     <script type="text/javascript" src="{% static 'js/typed.js' %}"></script>
+       <script type="text/javascript">
+        var typed = new Typed('.typing', {
+          strings: ["Fall .", "Rise ." , "Improve ." ,"Win ."],
+          // loop: false,
+          typeSpeed: 100,
+          backSpeed: 40,
+          // backDelay: 1000,
+        });
+       </script>
+
+
+
+</body>
+
+</html>

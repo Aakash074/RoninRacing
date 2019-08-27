@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Team| Ronin Racing</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body style="font-family: 'Roboto', sans-serif;">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+  <a class="navbar-brand" href="/">Ronin Racing</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/spons/">Sponsors</a>
+      </li>
+      <li class="nav-item active">
+        <a href="/team/" class="nav-link">Team</a>
+      </li>
+      <li class="nav-item">
+      	<a href="/quiz/exam/" class="nav-link">Quiz</a>
+      </li>
+    </ul>
+    {% if auth %}
+      <a href="/auth/logout/" class="nav-link" style="color: white;">Logout</a>
+    {% else %}
+      <a href="/auth/login/" class="nav-link" style="color: white;" >Login</a>
+      <a href="/auth/signup/" class="nav-link" style="color: white;">Sign Up</a>
+    {% endif %}
+  </div>
+</div>
+</nav>
+<div class="header" style="background-color: #4d4d4d; padding: 100px;">
+	<center>
+		<h1 style="color: white;">A Genuine Group <br> Of Car Makers</h1>
+		<p style="color: white;">The secret to truly successful work isn’t just about <br> technology; it’s about working with the right people.</p>
+	</center>
+</div>
+<br><br><br>
+<div class="container">
+	<center><h1 style="background-color: green; width: 500px;">Department Heads</h1> </center>
+	<div class="row">
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<div class="card" style="width: 18rem; margin: 3px;">
+			  <img class="card-img-top" src="https://seesparkbox.com/uploads/employee_images/nikki-bucher.jpg" alt="Card image cap">
+			  <div class="card-body">
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<div class="card" style="width: 18rem; margin: 3px;">
+			  <img class="card-img-top" src="{% static 'img/himanshu.jpg' %}" alt="Card image cap" height=280px>
+			  <div class="card-body">
+			    <p class="card-text"><center>Himanshu Sahu <br> Vice Captain <br>Mechanical IIIrd Yr <br><a href="mailto:himanshusahu@student.nitw.ac.in">himanshusahu@student.nitw.ac.in<br></a>7891739144 <br> </center></p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<div class="card" style="width: 18rem; margin: 3px;">
+			  <img class="card-img-top" src="https://seesparkbox.com/uploads/employee_images/nikki-bucher.jpg" alt="Card image cap">
+			  <div class="card-body">
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  </div>
+			</div>
+		</div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/swapnil2.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><center>Swapnil Soni <br> Design Head <br>Mechanical IInd Yr <br><a href="mailto:swapnilsoni1210@gmail.com">swapnilsoni1210@gmail.com</a>9515759103 <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+	</div>
+</div>
+<br><br>
+<div class="container">
+    <center><h1 style="background-color: green; width: 500px;">Design Department</h1> </center>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/himanshu.jpg' %}" alt="Card image cap" style="height:270px; width:270px padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/himanshu.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Sudeep <br> Design <br>Mechanical IIIrd Yr <br><a href="mailto:himanshusahu@student.nitw.ac.in">xyz@student.nitw.ac.in</a>xyzabc <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/shruti.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Thaduri Shruthi<br> Design <br>Civil IInd Yr <br><a href="mailto:Shruthithaduri73734@gmail.com">Shruthithaduri73734@gmail.com</a><br>7995693870<br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/divya.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>B. Divya <br> Design <br>Mechanical IInd Yr <br><a href="mailto:bandadivya61@gmail.com">bandadivya61@gmail.com</a><br>9381127401 <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<div class="container">
+    <center><h1 style="background-color: green; width: 500px;">Organising Department</h1> </center>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/pakya.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Pradnyavant Gaikwad <br> Sponshorship <br>Mechanical IIIrd Yr <br><a href="mailto:gaikwadpradnyavant358@gmail.com">gaikwadpradnyavant358@gmail.com</a><br>+91 98 340 20367 <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/himanshu.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Arpit Goyal <br> Media & PR <br>EEE IInd Yr <br><a href="mailto:arpitpali68@gmail.com">arpitpali68@gmail.com</a><br>+91 63 772 24725 <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/shruti.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Shalini Sai<br> Sponshorship <br>Civil IInd Yr <br><a href="mailto:Shruthithaduri73734@gmail.com">Shruthithaduri73734@gmail.com</a><br>7995693870<br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/likhitha.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>K. Likhitha Rathod <br> Sponshorship <br>Mechanical IInd Yr <br><a href="mailto:klikhitha121@gmail.com">klikhitha121@gmail.com</a><br>+91 63 030 35321 <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/snehdeep.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Snehdeep Kumar <br> Sponshorship <br>Biotech IIIrd Yr <br><a href="mailto:sinhasnehdeep@gmail.com">sinhasnehdeep@gmail.com</a><br>+91 80 845 89015 <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/himanshu.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Sai Teja Ch <br> Web Developer <br>EEE IIIrd Yr <br><a href="mailto:himanshusahu@student.nitw.ac.in">xyz@student.nitw.ac.in</a><br>xyzabc <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/himanshu.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Yash<br> Web Developer <br> IIIrd Yr <br><a href="mailto:xyz4@gmail.com">xyz4@gmail.com</a><br>xyzabc<br> </center></p>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem; margin: 3px;">
+                <img class="card-img-top" src="{% static 'img/aakash.jpg' %}" alt="Card image cap" style="height: 270px; width: 270px; padding:30px; border-radius:50%">
+                    <div class="card-body">
+                        <p class="card-text"><center>Aakash Kumar <br> Web Developer <br>CSE IInd Yr <br><a href="mailto:aakashkumaar074@gmail.com">aakashkumaar074gmail.com</a><br>+91 85 277 41952 <br> </center></p>
+                    </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

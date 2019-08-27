@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sponsors| Ronin Racing</title>
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+  <a class="navbar-brand" href="/">Ronin Racing</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/spons/">Sponsors</a>
+      </li>
+      <li class="nav-item">
+        <a href="/team/" class="nav-link">Team</a>
+      </li>
+      <li class="nav-item">
+      	<a href="/quiz/exam/" class="nav-link">Quiz</a>
+      </li>
+    </ul>
+    {% if auth %}
+      <a href="/auth/logout/" class="nav-link" style="color: white;">Logout</a>
+    {% else %}
+      <a href="/auth/login/" class="nav-link" style="color: white;" >Login</a>
+      <a href="/auth/signup/" class="nav-link" style="color: white;">Sign Up</a>
+    {% endif %}
+  </div>
+</div>
+</nav>
+
+  <div id="blog-section">
+	    <div class="container">
+
+	        <div class="row">
+
+	        	<div class="col-xs-12 col-sm-6 col-md-4">
+
+	        		<div class="blog-section-intro">
+	        			<h2><u> Our Sponsors</u></h2>
+	        			<p style="font-weight: 200 ,font-size: 10px">Stake holders of the team .</p>
+	        			<p> This journey is possible only because of the regular Monetary and Technical support off all our sponsors and Industry collaborations. But success of the team at FS UK is directly co-related to the budget of the entire project, the bigger the sponsorship, the better the results we hope to bring for the nation.</p>
+	        		</div>
+	        	</div>
+
+	        	<div class="col-xs-12 col-sm-6 col-md-4">
+
+	        		<a class="blog-item first" href="#" title="Suspendisse potenti">
+	        			<div class="blog-item-img" style="background-image: url(media/mrf_logo.png);"></div>
+	        			<div class="blog-item-content">
+	        				<span class="blog-item-label">Lead Sponsors</span>
+	        				<span class="blog-item-date">
+	        					<span class="blog-item-date-day">30</span>
+	        					<span class="blog-item-date-month">Sept</span>
+	        				</span>
+	        				<h3>M R F</h3>
+	        				<p>Tyres with Muscle</p>
+	        			</div>
+	        		</a>
+
+	        	</div>
+
+	        	<div class="col-xs-12 col-sm-6 col-md-4">
+
+	        		<a class="blog-item second" href="#" title="Suspendisse potenti">
+	        			<div class="blog-item-img" style="background-image: url(media/bewakoof_logo.png);"></div>
+	        			<div class="blog-item-content">
+	        				<span class="blog-item-label">Co-Sponsor</span>
+	        				<span class="blog-item-date">
+	        					<span class="blog-item-date-day">18</span>
+	        					<span class="blog-item-date-month">Aug</span>
+	        				</span>
+	        				<h3>Bewakoof</h3>
+	        				<p>Ham sabko bewakoof banate </p>
+	        			</div>
+	        		</a>
+
+	        	</div>
+
+	        	<div class="col-xs-12 col-sm-6 col-md-4">
+
+	        		<a class="blog-item third" href="#" title="Suspendisse potenti">
+	        			<div class="blog-item-img" style="background-image: url(https://static.pexels.com/photos/30587/pexels-photo-30587-medium.jpg);"></div>
+	        			<div class="blog-item-content">
+	        				<span class="blog-item-label">Co- Sponsor</span>
+	        				<span class="blog-item-date">
+	        					<span class="blog-item-date-day">09</span>
+	        					<span class="blog-item-date-month">Aug</span>
+	        				</span>
+	        				<h3> Sameer Jhariya</h3>
+	        				<p> I live in 1k </p>
+	        			</div>
+	        		</a>
+
+	        	</div>
+
+	        	<div class="col-xs-12 col-sm-6 col-md-4">
+
+	        		<a class="blog-item fourth" href="#" title="Suspendisse potenti">
+	        			<div class="blog-item-img" style="background-image: url(https://static.pexels.com/photos/116191/pexels-photo-116191-medium.jpeg);"></div>
+	        			<div class="blog-item-content">
+	        				<span class="blog-item-label">Co-Sponsor</span>
+	        				<span class="blog-item-date">
+	        					<span class="blog-item-date-day">7</span>
+	        					<span class="blog-item-date-month">Jul</span>
+	        				</span>
+	        				<h3>Ashutosh Kumar</h3>
+	        				<p>He live's with me</p>
+	        			</div>
+	        		</a>
+
+	        	</div>
+
+<!-- 	        	<div class="col-xs-12 col-sm-6 col-md-4">
+
+	        		<div class="buttonContainer">
+	        			<a class="button" href="#" title="Show more"><span>Show more</span></a>
+	        		</div>
+
+	        	</div> -->
+
+	        </div>
+
+	    </div>
+    </div>
+  
+  
+
+</body>
+
+</html>
